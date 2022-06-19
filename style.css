@@ -85,3 +85,8 @@ footer {
 #box9 {
   grid-area: '9';
 }
+
+.active {
+  background-color: #149902;
+  color: #fff;
+}
