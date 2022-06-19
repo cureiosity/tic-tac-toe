@@ -20,13 +20,9 @@ function toggleHighlight(e) {
 let clickCount = 0
 function markSquare(e) {
   clickCount++
-  let filler = null
-  if (clickCount % 2 === 0) {
-    filler = "O"
+  if (clickCount % 2 !== 0) {
+    e.target.classList.add("player-red")
   } else {
-    filler = "X"
+    e.target.classList.add("player-blue")
   }
-  const playerMark = document.createElement("h1")
-  playerMark.innerText = filler
-  e.target.appendChild(playerMark)
 }

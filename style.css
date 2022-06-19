@@ -51,6 +51,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #box1 {
@@ -92,4 +93,12 @@ footer {
 .active {
   background-color: #149902;
   color: #fff;
+}
+
+.player-red{
+  background-color: red;
+}
+
+.player-blue{
+  background-color: blue;
 }
