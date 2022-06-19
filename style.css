@@ -25,11 +25,13 @@ header {
 }
 
 main {
-  display: flex;
+  display: grid;
   width: 100%;
-  justify-content: center;
-  align-items: center;
   grid-area: main;
+  grid-template-areas: 
+  "1 2 3"
+  "4 5 6"
+  "7 8 9";
 }
 
 footer {
@@ -38,4 +40,48 @@ footer {
   justify-content: center;
   align-items: center;
   grid-area: footer;
+}
+
+.ttt-square {
+  background-color: pink;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#box1 {
+  grid-area: '1';
+}
+
+#box2 {
+  grid-area: '2';
+}
+
+#box3 {
+  grid-area: '3';
+}
+
+#box4 {
+  grid-area: '4';
+}
+
+#box5 {
+  grid-area: '5';
+}
+
+#box6 {
+  grid-area: '6';
+}
+
+#box7 {
+  grid-area: '7';
+}
+
+#box8 {
+  grid-area: '8';
+}
+
+#box9 {
+  grid-area: '9';
 }
