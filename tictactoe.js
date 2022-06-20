@@ -26,3 +26,13 @@ function markSquare(e) {
     e.target.classList.add("player-blue")
   }
 }
+
+const resetButton = document.querySelector("#reset")
+console.log(resetButton.innerText)
+resetButton.addEventListener("click", resetBoard)
+function resetBoard() {
+  tttSquares.forEach((square) => {
+    square.classList.remove("player-red")
+    square.classList.remove("player-blue")
+  })
+}
