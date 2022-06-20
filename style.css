@@ -48,7 +48,6 @@ footer {
   background-color: white;
   width: 30vh;
   height: 30vh;
-  cursor: pointer;
 }
 
 #box1 {
@@ -104,10 +103,15 @@ footer {
   color: #fff;
 }
 
-.player-red{
+.player-red {
   background-color: red;
 }
 
-.player-blue{
+.player-blue {
   background-color: blue;
 }
+
+.unclicked {
+  cursor: pointer;
+}
+
