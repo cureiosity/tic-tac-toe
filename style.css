@@ -26,8 +26,10 @@ header {
 
 main {
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   grid-area: main;
+  justify-content: center;
   align-items: center;
 }
 
@@ -122,6 +124,12 @@ footer {
 
 .unclicked {
   cursor: pointer;
+}
+
+#dialog {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10%;
 }
 
 #reset {
