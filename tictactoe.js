@@ -19,28 +19,34 @@ function toggleHighlight(e) {
 }
 
 let clickCount = 0
+let whoseTurn = document.querySelector("#turn-color")
+console.log(whoseTurn.innerText)
+
 function markSquare(e) {
   if (e.target.classList.contains("unclicked")) {
     clickCount++
-    console.log(clickCount)
     e.target.classList.remove("unclicked")
     if (clickCount % 2 !== 0) {
       e.target.classList.add("player-red")
+      whoseTurn.innerText = "Blue's"
+      whoseTurn.style.color = "blue"
     } else {
       e.target.classList.add("player-blue")
+      whoseTurn.innerText = "Red's"
+      whoseTurn.style.color = "red"
     }
   }
 }
 
 const resetButton = document.querySelector("#reset")
-console.log(resetButton.innerText)
 resetButton.addEventListener("click", resetBoard)
 function resetBoard() {
   clickCount = 0
-  console.log(clickCount)
   tttSquares.forEach((square) => {
     square.classList.remove("player-red")
     square.classList.remove("player-blue")
     square.classList.add("unclicked")
   })
+  whoseTurn.innerText = "Red's"
+  whoseTurn.style.color = "red"
 }

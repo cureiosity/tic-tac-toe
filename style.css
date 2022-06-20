@@ -111,7 +111,6 @@ footer {
 
 .active {
   background-color: lime;
-  color: #fff;
 }
 
 .player-red {
@@ -130,8 +129,9 @@ footer {
   text-align: center;
   width: 100%;
   margin-bottom: 10%;
+  font-weight: bold;
 }
 
-#reset {
-  display: block;
+#turn-color {
+  color: red;
 }
