@@ -32,6 +32,7 @@ main {
   "1 2 3"
   "4 5 6"
   "7 8 9";
+  margin: 2vh;
 }
 
 footer {
@@ -43,8 +44,7 @@ footer {
 }
 
 .ttt-square {
-  background-color: pink;
-  border: 1px solid black;
+  background-color: white;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -56,18 +56,24 @@ footer {
 
 #box1 {
   grid-area: '1';
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
 }
 
 #box2 {
   grid-area: '2';
+  border-bottom: 4px solid black;
 }
 
 #box3 {
   grid-area: '3';
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
 }
 
 #box4 {
   grid-area: '4';
+  border-right: 4px solid black;
 }
 
 #box5 {
@@ -76,22 +82,28 @@ footer {
 
 #box6 {
   grid-area: '6';
+  border-left: 4px solid black;
 }
 
 #box7 {
   grid-area: '7';
+  border-top: 4px solid black;
+  border-right: 4px solid black;
 }
 
 #box8 {
   grid-area: '8';
+  border-top: 4px solid black;
 }
 
 #box9 {
   grid-area: '9';
+  border-top: 4px solid black;
+  border-left: 4px solid black;
 }
 
 .active {
-  background-color: #149902;
+  background-color: lime;
   color: #fff;
 }
 
