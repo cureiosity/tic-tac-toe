@@ -11,7 +11,7 @@ body {
     "header"
     "main"
     "footer";
-  grid-template-rows: 10vh auto 5vh;
+  grid-template-rows: 10vh 85vh 5vh;
 }
 
 header {
@@ -25,15 +25,10 @@ header {
 }
 
 main {
-  display: grid;
+  display: flex;
   width: 100%;
   grid-area: main;
-  grid-template-areas: 
-  "1 2 3"
-  "4 5 6"
-  "7 8 9";
-  margin: 2vh;
-  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -44,56 +39,70 @@ footer {
   grid-area: footer;
 }
 
+#ttt-container {
+  display: grid;
+  max-width: 75%;
+  max-height: 75%;
+  grid-area: main;
+  grid-template-areas: 
+  "one two three"
+  "four five six"
+  "seven eight nine";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: center;
+}
+
 .ttt-square {
   background-color: white;
-  width: 30vh;
-  height: 30vh;
+  height: 10vh;
+  width: 10vh;
 }
 
 #box1 {
-  grid-area: '1';
+  grid-area: one;
   border-bottom: 1vh solid black;
   border-right: 1vh solid black;
 }
 
 #box2 {
-  grid-area: '2';
+  grid-area: two;
   border-bottom: 1vh solid black;
 }
 
 #box3 {
-  grid-area: '3';
+  grid-area: three;
   border-bottom: 1vh solid black;
   border-left: 1vh solid black;
 }
 
 #box4 {
-  grid-area: '4';
+  grid-area: four;
   border-right: 1vh solid black;
 }
 
 #box5 {
-  grid-area: '5';
+  grid-area: five;
 }
 
 #box6 {
-  grid-area: '6';
+  grid-area: six;
   border-left: 1vh solid black;
 }
 
 #box7 {
-  grid-area: '7';
+  grid-area: seven;
   border-top: 1vh solid black;
   border-right: 1vh solid black;
 }
 
 #box8 {
-  grid-area: '8';
+  grid-area: eight;
   border-top: 1vh solid black;
 }
 
 #box9 {
-  grid-area: '9';
+  grid-area: nine;
   border-top: 1vh solid black;
   border-left: 1vh solid black;
 }
@@ -115,3 +124,6 @@ footer {
   cursor: pointer;
 }
 
+#reset {
+  display: block;
+}

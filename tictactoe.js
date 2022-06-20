@@ -1,10 +1,10 @@
-const main = document.querySelector("main")
+const tttContainer = document.querySelector("#ttt-container")
 for (i = 0; i < 9; i++) {
   const tttDiv = document.createElement("div")
   tttDiv.classList.add("ttt-square")
   tttDiv.classList.add("unclicked")
   tttDiv.id = `box${i + 1}`
-  main.appendChild(tttDiv)
+  tttContainer.appendChild(tttDiv)
 }
 
 const tttSquares = document.querySelectorAll(".ttt-square")
