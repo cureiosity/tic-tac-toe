@@ -8,12 +8,14 @@ for (i = 0; i < 9; i++) {
 }
 
 const tttSquares = document.querySelectorAll(".ttt-square")
-tttSquares.forEach((square) => {
-  square.addEventListener("mouseover", toggleHighlight)
-  square.addEventListener("mouseout", toggleHighlight)
-  square.addEventListener("click", markSquare)
-  square.addEventListener("click", checkForWinner)
-})
+
+function addEventListeners() {
+  tttSquares.forEach((square) => {
+    square.addEventListener("click", markSquare)
+    square.addEventListener("click", checkForWinner)
+  })
+}
+addEventListeners()
 
 function toggleHighlight(e) {
   e.target.classList.toggle("active")
@@ -21,6 +23,7 @@ function toggleHighlight(e) {
 
 let clickCount = 0
 let whoseTurn = document.querySelector("#turn-color")
+let theRest = document.querySelector("#the-rest")
 
 function markSquare(e) {
   if (e.target.classList.contains("unclicked")) {
@@ -74,7 +77,16 @@ function checkForWinner() {
       [...square5.classList].includes("player-red") &&
       [...square7.classList].includes("player-red"))
   ) {
-    console.log("red wins!")
+    whoseTurn.innerText = "Red"
+    whoseTurn.style.color = "red"
+    theRest.innerText = " wins!"
+    tttSquares.forEach((square) => {
+      square.classList.remove("unclicked")
+      square.removeEventListener("mouseover", toggleHighlight)
+      square.removeEventListener("mouseout", toggleHighlight)
+      square.removeEventListener("click", markSquare)
+      square.removeEventListener("click", checkForWinner)
+    })
   }
 
   if (
@@ -103,7 +115,16 @@ function checkForWinner() {
       [...square5.classList].includes("player-blue") &&
       [...square7.classList].includes("player-blue"))
   ) {
-    console.log("blue wins!")
+    whoseTurn.innerText = "Blue"
+    whoseTurn.style.color = "blue"
+    theRest.innerText = " wins!"
+    tttSquares.forEach((square) => {
+      square.classList.remove("unclicked")
+      square.removeEventListener("mouseover", toggleHighlight)
+      square.removeEventListener("mouseout", toggleHighlight)
+      square.removeEventListener("click", markSquare)
+      square.removeEventListener("click", checkForWinner)
+    })
   }
 }
 
@@ -115,7 +136,12 @@ function resetBoard() {
     square.classList.remove("player-red")
     square.classList.remove("player-blue")
     square.classList.add("unclicked")
+    square.addEventListener("mouseover", toggleHighlight)
+    square.addEventListener("mouseout", toggleHighlight)
+    square.addEventListener("click", markSquare)
+    square.addEventListener("click", checkForWinner)
   })
   whoseTurn.innerText = "Red's"
   whoseTurn.style.color = "red"
+  theRest.innerText = " turn"
 }

@@ -61,6 +61,10 @@ footer {
   width: 10vh;
 }
 
+.unclicked:hover {
+  background-color: lime;
+}
+
 #box1 {
   grid-area: one;
   border-bottom: 1vh solid black;
