@@ -12,6 +12,7 @@ tttSquares.forEach((square) => {
   square.addEventListener("mouseover", toggleHighlight)
   square.addEventListener("mouseout", toggleHighlight)
   square.addEventListener("click", markSquare)
+  square.addEventListener("click", checkForWinner)
 })
 
 function toggleHighlight(e) {
@@ -20,7 +21,6 @@ function toggleHighlight(e) {
 
 let clickCount = 0
 let whoseTurn = document.querySelector("#turn-color")
-console.log(whoseTurn.innerText)
 
 function markSquare(e) {
   if (e.target.classList.contains("unclicked")) {
@@ -35,6 +35,70 @@ function markSquare(e) {
       whoseTurn.innerText = "Red's"
       whoseTurn.style.color = "red"
     }
+  }
+}
+
+const square1 = document.querySelector("#box1")
+const square2 = document.querySelector("#box2")
+const square3 = document.querySelector("#box3")
+const square4 = document.querySelector("#box4")
+const square5 = document.querySelector("#box5")
+const square6 = document.querySelector("#box6")
+const square7 = document.querySelector("#box7")
+const square8 = document.querySelector("#box8")
+const square9 = document.querySelector("#box9")
+function checkForWinner() {
+  if (
+    ([...square1.classList].includes("player-red") &&
+      [...square2.classList].includes("player-red") &&
+      [...square3.classList].includes("player-red")) ||
+    ([...square1.classList].includes("player-blue") &&
+      [...square2.classList].includes("player-blue") &&
+      [...square3.classList].includes("player-blue")) ||
+    ([...square4.classList].includes("player-red") &&
+      [...square5.classList].includes("player-red") &&
+      [...square6.classList].includes("player-red")) ||
+    ([...square4.classList].includes("player-blue") &&
+      [...square5.classList].includes("player-blue") &&
+      [...square6.classList].includes("player-blue")) ||
+    ([...square7.classList].includes("player-red") &&
+      [...square8.classList].includes("player-red") &&
+      [...square9.classList].includes("player-red")) ||
+    ([...square7.classList].includes("player-blue") &&
+      [...square8.classList].includes("player-blue") &&
+      [...square9.classList].includes("player-blue")) ||
+    ([...square1.classList].includes("player-red") &&
+      [...square4.classList].includes("player-red") &&
+      [...square7.classList].includes("player-red")) ||
+    ([...square1.classList].includes("player-blue") &&
+      [...square4.classList].includes("player-blue") &&
+      [...square7.classList].includes("player-blue")) ||
+    ([...square2.classList].includes("player-red") &&
+      [...square5.classList].includes("player-red") &&
+      [...square8.classList].includes("player-red")) ||
+    ([...square2.classList].includes("player-blue") &&
+      [...square5.classList].includes("player-blue") &&
+      [...square8.classList].includes("player-blue")) ||
+    ([...square3.classList].includes("player-red") &&
+      [...square6.classList].includes("player-red") &&
+      [...square9.classList].includes("player-red")) ||
+    ([...square3.classList].includes("player-blue") &&
+      [...square6.classList].includes("player-blue") &&
+      [...square9.classList].includes("player-blue")) ||
+    ([...square1.classList].includes("player-red") &&
+      [...square5.classList].includes("player-red") &&
+      [...square9.classList].includes("player-red")) ||
+    ([...square1.classList].includes("player-blue") &&
+      [...square5.classList].includes("player-blue") &&
+      [...square9.classList].includes("player-blue")) ||
+    ([...square3.classList].includes("player-red") &&
+      [...square5.classList].includes("player-red") &&
+      [...square7.classList].includes("player-red")) ||
+    ([...square3.classList].includes("player-blue") &&
+      [...square5.classList].includes("player-blue") &&
+      [...square7.classList].includes("player-blue"))
+  ) {
+    console.log("we have a winner!")
   }
 }
 
