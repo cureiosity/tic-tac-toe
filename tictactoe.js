@@ -39,6 +39,11 @@ function markSquare(e) {
       whoseTurn.style.color = "red"
     }
   }
+  if (clickCount === 9) {
+    whoseTurn.innerText = "It's a"
+    whoseTurn.style.color = "black"
+    theRest.innerText = " tie!"
+  }
 }
 
 const square1 = document.querySelector("#box1")
