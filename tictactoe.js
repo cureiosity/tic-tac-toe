@@ -52,53 +52,58 @@ function checkForWinner() {
     ([...square1.classList].includes("player-red") &&
       [...square2.classList].includes("player-red") &&
       [...square3.classList].includes("player-red")) ||
-    ([...square1.classList].includes("player-blue") &&
-      [...square2.classList].includes("player-blue") &&
-      [...square3.classList].includes("player-blue")) ||
     ([...square4.classList].includes("player-red") &&
       [...square5.classList].includes("player-red") &&
       [...square6.classList].includes("player-red")) ||
-    ([...square4.classList].includes("player-blue") &&
-      [...square5.classList].includes("player-blue") &&
-      [...square6.classList].includes("player-blue")) ||
     ([...square7.classList].includes("player-red") &&
       [...square8.classList].includes("player-red") &&
       [...square9.classList].includes("player-red")) ||
-    ([...square7.classList].includes("player-blue") &&
-      [...square8.classList].includes("player-blue") &&
-      [...square9.classList].includes("player-blue")) ||
     ([...square1.classList].includes("player-red") &&
       [...square4.classList].includes("player-red") &&
       [...square7.classList].includes("player-red")) ||
-    ([...square1.classList].includes("player-blue") &&
-      [...square4.classList].includes("player-blue") &&
-      [...square7.classList].includes("player-blue")) ||
     ([...square2.classList].includes("player-red") &&
       [...square5.classList].includes("player-red") &&
       [...square8.classList].includes("player-red")) ||
-    ([...square2.classList].includes("player-blue") &&
-      [...square5.classList].includes("player-blue") &&
-      [...square8.classList].includes("player-blue")) ||
     ([...square3.classList].includes("player-red") &&
       [...square6.classList].includes("player-red") &&
       [...square9.classList].includes("player-red")) ||
-    ([...square3.classList].includes("player-blue") &&
-      [...square6.classList].includes("player-blue") &&
-      [...square9.classList].includes("player-blue")) ||
     ([...square1.classList].includes("player-red") &&
       [...square5.classList].includes("player-red") &&
       [...square9.classList].includes("player-red")) ||
+    ([...square3.classList].includes("player-red") &&
+      [...square5.classList].includes("player-red") &&
+      [...square7.classList].includes("player-red"))
+  ) {
+    console.log("red wins!")
+  }
+
+  if (
+    ([...square1.classList].includes("player-blue") &&
+      [...square2.classList].includes("player-blue") &&
+      [...square3.classList].includes("player-blue")) ||
+    ([...square4.classList].includes("player-blue") &&
+      [...square5.classList].includes("player-blue") &&
+      [...square6.classList].includes("player-blue")) ||
+    ([...square7.classList].includes("player-blue") &&
+      [...square8.classList].includes("player-blue") &&
+      [...square9.classList].includes("player-blue")) ||
+    ([...square1.classList].includes("player-blue") &&
+      [...square4.classList].includes("player-blue") &&
+      [...square7.classList].includes("player-blue")) ||
+    ([...square2.classList].includes("player-blue") &&
+      [...square5.classList].includes("player-blue") &&
+      [...square8.classList].includes("player-blue")) ||
+    ([...square3.classList].includes("player-blue") &&
+      [...square6.classList].includes("player-blue") &&
+      [...square9.classList].includes("player-blue")) ||
     ([...square1.classList].includes("player-blue") &&
       [...square5.classList].includes("player-blue") &&
       [...square9.classList].includes("player-blue")) ||
-    ([...square3.classList].includes("player-red") &&
-      [...square5.classList].includes("player-red") &&
-      [...square7.classList].includes("player-red")) ||
     ([...square3.classList].includes("player-blue") &&
       [...square5.classList].includes("player-blue") &&
       [...square7.classList].includes("player-blue"))
   ) {
-    console.log("we have a winner!")
+    console.log("blue wins!")
   }
 }
 
